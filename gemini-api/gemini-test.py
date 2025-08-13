@@ -1,8 +1,7 @@
 from google import genai
 
-# The client gets the API key from the environment variable `GEMINI_API_KEY`.
-
-client = genai.Client(api_key="AIzaSyAtRcCnT4gsBcqubmffKKHajNsWuhMALEw")
+# API key generada aqui https://aistudio.google.com/u/1/apikey
+client = genai.Client(api_key="clave api key")
 
 
 # Modelo de texto
@@ -19,5 +18,6 @@ response = client.models.generate_content(
     model="gemini-2.5-flash",
     contents=[my_file, "Which company belongs"],
 )
+
 
 print(response.text)
